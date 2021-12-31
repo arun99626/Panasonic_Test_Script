@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpecBind.CodedUI</name>
+    </assembly>
+    <members>
+        <member name="T:SpecBind.CodedUI.CodedUIBrowser">
+            <summary>
+            An IBrowser implementation for Coded UI.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.#ctor(System.Lazy{Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow},SpecBind.Actions.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecBind.CodedUI.CodedUIBrowser" /> class.
+            </summary>
+            <param name="browserWindow">The browser window.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="P:SpecBind.CodedUI.CodedUIBrowser.BasePageType">
+            <summary>
+            Gets the type of the base page.
+            </summary>
+            <value>
+            The type of the base page.
+            </value>
+        </member>
+        <member name="P:SpecBind.CodedUI.CodedUIBrowser.Url">
+            <summary>
+            Gets the url of the current page.
+            </summary>
+            <value>
+            The url of the base page.
+            </value>
+        </member>
+        <member name="P:SpecBind.CodedUI.CodedUIBrowser.IsCreated">
+            <summary>
+            Gets a value indicating whether or not the browser is created.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:SpecBind.CodedUI.CodedUIBrowser" /> class.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.AddCookie(System.String,System.String,System.String,System.Nullable{System.DateTime},System.String,System.Boolean)">
+            <summary>
+            Adds the cookie to the browser.
+            </summary>
+            <param name="name">The cookie name.</param>
+            <param name="value">The cookie value.</param>
+            <param name="path">The path.</param>
+            <param name="expireDateTime">The expiration date time.</param>
+            <param name="domain">The cookie domain.</param>
+            <param name="secure">if set to <c>true</c> the cookie is secure.</param>
+            <exception cref="T:System.NotImplementedException">Currently not implemented.</exception>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.GetCookie(System.String)">
+            <summary>
+            Get a cookie from the browser
+            </summary>
+            <param name="name">The name of the cookie</param>
+            <returns>The cookie (if exists)</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.ClearCookies">
+            <summary>
+            Clear all browser cookies
+            </summary>
+            <remarks>Excluded from coverage because of simple static calls.</remarks>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.ClearUrl">
+            <summary>
+            Clears the URL.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.CanGetUrl">
+            <summary>
+            Determines whether the URL can be retrieved.
+            </summary>
+            <returns><c>true</c> if the URL can be retrieved; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.Close">
+            <summary>
+            Closes this instance.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.GoTo(System.Uri)">
+            <summary>
+            Navigates the browser to the given <paramref name="url" />.
+            </summary>
+            <param name="url">The URL specified as a well formed Uri.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.DismissAlert(SpecBind.BrowserSupport.AlertBoxAction,System.String)">
+            <summary>
+            Dismisses the alert.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="text">The text to enter.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.ExecuteScript(System.String,System.Object[])">
+            <summary>
+            Executes the script.
+            </summary>
+            <param name="script">The script to execute.</param>
+            <param name="args">The arguments.</param>
+            <returns>The result of the script if needed.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.TakeScreenshot(System.String,System.String)">
+            <summary>
+            Takes the screenshot from the native browser.
+            </summary>
+            <param name="imageFolder">The image folder.</param>
+            <param name="fileNameBase">The file name base.</param>
+            <returns>The complete file path if created; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.SaveHtml(System.String,System.String)">
+            <summary>
+            Save the html from the native browser.
+            </summary>
+            <param name="destinationFolder">The destination folder.</param>
+            <param name="fileNameBase">The file name base.</param>
+            <returns>The complete file path if created; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.DisposeWindow(System.Boolean)">
+            <summary>
+            Releases windows and driver specific resources. This method is already protected by the base instance.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.GetNativePageLocation(SpecBind.Pages.IPage)">
+            <summary>
+            Gets the native page location.
+            </summary>
+            <param name="page">The page interface.</param>
+            <returns>A collection of URIs to validate.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.CreateNativePage(System.Type,System.Boolean)">
+            <summary>
+            Creates the native page.
+            </summary>
+            <param name="pageType">Type of the page.</param>
+            <param name="verifyPageValidity">if set to <c>true</c> verify the page validity.</param>
+            <returns>The created page object.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.CreateNativePage(System.Type)">
+            <summary>
+            Creates the native page.
+            </summary>
+            <param name="pageType">Type of the page.</param>
+            <returns>The internal document.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.GetFrameCache">
+            <summary>
+            Creates the frame cache from the currently loaded types in the project.
+            </summary>
+            <returns>The created frame cache.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowser.GetFrameTypes">
+            <summary>
+            Gets the user defined type of class that defines the frame structure.
+            </summary>
+            <returns>Any matching types that are the given definition of the frame.</returns>
+        </member>
+        <member name="T:SpecBind.CodedUI.CodedUIBrowserFactory">
+            <summary>
+            A browser factory class for Coded UI tests.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowserFactory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecBind.CodedUI.CodedUIBrowserFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIBrowserFactory.CreateBrowser(SpecBind.BrowserSupport.BrowserType,SpecBind.Configuration.BrowserFactoryConfigurationElement,SpecBind.Actions.ILogger)">
+            <summary>
+            Creates the browser.
+            </summary>
+            <param name="browserType">Type of the browser.</param>
+            <param name="browserFactoryConfiguration">The browser factory configuration.</param>
+            <param name="logger">The logger.</param>
+            <returns>A browser object.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the browser type is not supported.</exception>
+        </member>
+        <member name="T:SpecBind.CodedUI.CodedUIListElementWrapper`2">
+            <summary>
+            An implementation of <see cref="T:SpecBind.Pages.ListElementWrapper`2"/> for Coded UI.
+            </summary>
+            <typeparam name="TElement">The type of the element.</typeparam>
+            <typeparam name="TChildElement">The type of the child element.</typeparam>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIListElementWrapper`2.#ctor(`0,SpecBind.BrowserSupport.IBrowser)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecBind.CodedUI.CodedUIListElementWrapper`2" /> class.
+            </summary>
+            <param name="parentElement">The parent element.</param>
+            <param name="webBrowser">The browser.</param>
+        </member>
+        <member name="P:SpecBind.CodedUI.CodedUIListElementWrapper`2.ValidateElementExists">
+            <summary>
+            Gets or sets a value indicating whether to validate the element exists.
+            </summary>
+            <value>
+            <c>true</c> if the class should validate element exists; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIListElementWrapper`2.CreateElement(SpecBind.BrowserSupport.IBrowser,`0,System.Int32)">
+            <summary>
+            Creates the element.
+            </summary>
+            <param name="browser">The browser.</param>
+            <param name="parentElement">The parent element.</param>
+            <param name="index">The index.</param>
+            <returns>The newly created element.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIListElementWrapper`2.ElementExists(`1,System.Int32)">
+            <summary>
+            Elements the exists.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="expectedIndex">The expected index.</param>
+            <returns><c>true</c> if the element exists.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIListElementWrapper`2.FetchElementList(`0,SpecBind.BrowserSupport.IBrowser)">
+            <summary>
+            Fetches the element list.
+            </summary>
+            <param name="parentElement">The parent element.</param>
+            <param name="browser">The browser.</param>
+            <returns>The list of child elements.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIListElementWrapper`2.ClearSearchProperties(Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Assigns the filter properties.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIListElementWrapper`2.CreateChildProxyElement(`0,Microsoft.VisualStudio.TestTools.UITesting.UITestControl,SpecBind.BrowserSupport.IBrowser)">
+            <summary>
+            Creates the child proxy element.
+            </summary>
+            <param name="parentElement">The parent element.</param>
+            <param name="control">The control.</param>
+            <param name="browser">The browser.</param>
+            <returns>The created child element.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIListElementWrapper`2.CreateElementList(`0,SpecBind.BrowserSupport.IBrowser)">
+            <summary>
+            Creates the element list.
+            </summary>
+            <param name="parentElement">The parent element.</param>
+            <param name="browser">The browser.</param>
+            <returns>The list of child elements.</returns>
+        </member>
+        <member name="T:SpecBind.CodedUI.CodedUIPage`1">
+            <summary>
+            An implementation of a page for the code base.
+            </summary>
+            <typeparam name="TDocument">The type of the document.</typeparam>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecBind.CodedUI.CodedUIPage`1"/> class.
+            </summary>
+            <param name="page">
+            The page.
+            </param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.Highlight">
+            <summary>
+            Highlights this instance.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.Highlight(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl)">
+            <summary>
+            Highlights the specified element.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.WaitForElement(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl,SpecBind.Actions.WaitConditions,System.Nullable{System.TimeSpan})">
+            <summary>
+            Waits for element.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="waitCondition">The wait condition.</param>
+            <param name="timeout">The timeout to wait before failing.</param>
+            <returns><c>true</c> if the condition is met, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.ElementEnabledCheck(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl)">
+            <summary>
+            Checks to see if the element is enabled.
+            </summary>
+            <param name="element">The element.</param>
+            <returns><c>true</c> if the element is enabled; otherwise <c>false</c></returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.ElementExistsCheck(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl)">
+            <summary>
+            Checks to see if the element exists.
+            Waits the appropriate timeout if necessary.
+            </summary>
+            <param name="element">The element.</param>
+            <returns><c>true</c> if the element exists; otherwise <c>false</c></returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.ElementNotExistsCheck(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl)">
+            <summary>
+            Checks to see if the element doesn't exist.
+            Unlike ElementExistsCheck, this doesn't let the web driver wait first for the element to exist.
+            </summary>
+            <param name="element">The element.</param>
+            <returns><c>true</c> if the element doesn't exist; otherwise <c>false</c></returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.GetElementAttributeValue(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl,System.String)">
+            <summary>
+            Gets the element attribute value.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="attributeName">Name of the attribute.</param>
+            <returns>The element attribute value.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.GetElementText(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl)">
+            <summary>
+            Gets the element text.
+            </summary>
+            <param name="element">The element.</param>
+            <returns>The element text.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.GetPageFromElement(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl)">
+            <summary>
+            Gets the page from element.
+            </summary>
+            <param name="element">The element.</param>
+            <returns>The page interface.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.ClickElement(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl)">
+            <summary>
+            Clicks the element.
+            </summary>
+            <param name="element">The element.</param>
+            <returns><c>true</c> unless there is an error.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.GetClearMethod(System.Type)">
+            <summary>
+            Gets the clear method for the control.
+            </summary>
+            <param name="propertyType">Type of the property.</param>
+            <returns>
+            The function used to clear the data.
+            </returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.GetPageFillMethod(System.Type)">
+            <summary>
+            Gets the page fill method.
+            </summary>
+            <param name="propertyType">Type of the property.</param>
+            <returns>The action used to fill the page field.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUIPage`1.Moving(Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Determines if an element is currently moving (e.g. due to animation).
+            </summary>
+            <param name="element">The element.</param>
+            <returns><c>true</c> if the element's Location is changing, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:SpecBind.CodedUI.CodedUITableDriver">
+            <summary>
+            A table driver for Coded UI cells.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUITableDriver.#ctor(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlTable,SpecBind.BrowserSupport.IBrowser)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SpecBind.CodedUI.CodedUITableDriver"/> class.
+            </summary>
+            <param name="parentElement">The parent element.</param>
+            <param name="webBrowser">The web browser.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUITableDriver.ElementExists(SpecBind.CodedUI.CodedUITableDriver.RowWrapper,System.Int32)">
+            <summary>
+            Elements the exists.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="expectedIndex">The expected index.</param>
+            <returns><c>true</c> if the element exists.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUITableDriver.FetchElementList(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlTable,SpecBind.BrowserSupport.IBrowser)">
+            <summary>
+            Fetches the element list.
+            </summary>
+            <param name="parentElement">The parent element.</param>
+            <param name="browser">The browser.</param>
+            <returns>The created list of items.</returns>
+        </member>
+        <member name="T:SpecBind.CodedUI.CodedUITableDriver.RowWrapper">
+            <summary>
+            A wrapper class for a row to return needed cells.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUITableDriver.RowWrapper.#ctor(Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlRow" /> class by using the provided parent control.
+            </summary>
+            <param name="parent">The <see cref="T:Microsoft.VisualStudio.TestTools.UITesting.UITestControl" /> that contains this control.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUITableDriver.RowWrapper.GetElements">
+            <summary>
+            Gets the properties.
+            </summary>
+            <returns>The properties list for the class.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CodedUITableDriver.RowWrapper.GetCellLookup">
+            <summary>
+            Gets the cell lookup.
+            </summary>
+            <returns>The lookup dictionary to map indexes to cells.</returns>
+        </member>
+        <member name="T:SpecBind.CodedUI.CookieBuilder">
+            <summary>
+            Creates a JavaScript cookie from the input data.
+            </summary>
+        </member>
+        <member name="M:SpecBind.CodedUI.CookieBuilder.CreateCookie(System.String,System.String,System.String,System.Nullable{System.DateTime},System.String,System.Boolean)">
+            <summary>
+            Creates the cookie.
+            </summary>
+            <param name="name">The cookie name.</param>
+            <param name="value">The cookie value.</param>
+            <param name="path">The cookie path.</param>
+            <param name="expireDateTime">The expire date time.</param>
+            <param name="domain">The cookie domain.</param>
+            <param name="secure">if set to <c>true</c> the cookie is in secure mode.</param>
+            <returns>The cookie as a string.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.CookieBuilder.GetCookieValue(System.String)">
+            <summary>
+            Gets the value of a cookie via javascript's document
+            </summary>
+            <param name="name">The name of the cookie to retrieve</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.CookieBuilder.StripPort(System.String)">
+            <summary>
+            Strips the port from the domain.
+            </summary>
+            <param name="domain">The domain.</param>
+            <returns>The cleaned domain string.</returns>
+        </member>
+        <member name="T:SpecBind.CodedUI.FrameMapAttribute">
+            <summary>
+            An attribute that provides frame mapping for the page structure.
+            </summary>
+        </member>
+        <member name="T:SpecBind.CodedUI.PageBuilder`2">
+            <summary>
+            A class that constructs pages for the framework.
+            </summary>
+            <typeparam name="TParent">The type of the parent control.</typeparam>
+            <typeparam name="TOutput">The type of the output control.</typeparam>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.CreateElement(System.Type)">
+            <summary>
+            Creates the page.
+            </summary>
+            <param name="elementType">Type of the page.</param>
+            <returns>The page builder function.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the constructor is invalid.</exception>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.CreateFrameLocator(System.Type,System.Reflection.PropertyInfo)">
+            <summary>
+            Creates the frame locator method to help load that from a property.
+            </summary>
+            <param name="frameType">Type of the class that will provide the frame.</param>
+            <param name="property">The property on the class that should be accessed to provide the frame.</param>
+            <returns>The function used to create the document.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.AssignElementAttributes(Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlControl,SpecBind.Pages.ElementLocatorAttribute,System.Object[])">
+            <summary>
+            Assigns the element attributes.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="attribute">The attribute.</param>
+            <param name="nativeAttributes">The native attributes.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.CheckPageIsBaseClass(`1)">
+            <summary>
+            Checks to see if the control is the same type as the base class and performs the appropriate actions.
+            </summary>
+            <param name="control">The control.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.AssignPageElementAttributes(`1,SpecBind.Pages.ElementLocatorAttribute)">
+            <summary>
+            Assigns the page element attributes.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="locatorAttribute">The locator attribute.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.GetElementCollectionType">
+            <summary>
+            Gets the type of the element collection.
+            </summary>
+            <returns>The element collection concrete type.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.GetTableDriverType">
+            <summary>
+            Gets the type of the table driver.
+            </summary>
+            <returns>The type of the table driver.</returns>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.SetPageNavigationAttribute(`1,SpecBind.Pages.PageNavigationAttribute)">
+            <summary>
+            Checks to see if the control is the same type as the base class and performs the appropriate actions.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="attribute">The page navigation attribute.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.SetTextLocator(Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.String)">
+            <summary>
+            Sets the text locator.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="textLocator">The text locator.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.SetProperty(Microsoft.VisualStudio.TestTools.UITesting.PropertyExpressionCollection,System.String,System.String)">
+            <summary>
+            Sets the property.
+            </summary>
+            <param name="collection">The collection.</param>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:SpecBind.CodedUI.PageBuilder`2.SetProperty(System.Func{System.Boolean},Microsoft.VisualStudio.TestTools.UITesting.PropertyExpressionCollection,System.String,System.String)">
+            <summary>
+            Sets the property.
+            </summary>
+            <param name="conditionFunc">The condition function.</param>
+            <param name="collection">The collection.</param>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+    </members>
+</doc>
