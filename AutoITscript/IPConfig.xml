@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <section name="Options" type="Videoinsight.LIB.VIConfigSection, Videoinsight.LIB, Version=7.4.0.112, Culture=neutral, PublicKeyToken=null" />
+    </configSections>
+</configuration>

@@ -1,0 +1,13 @@
+Run("C:\Users\sundar.a\Desktop\VI Camera Simulator1.1\VI Camera Simulator1.1\VI Camera Simulator.exe")
+ControlFocus("VI Camera Simulator","","WindowsForms10.BUTTON.app.0.141b42a_r6_ad11")
+Sleep(3000)
+ControlClick("VI Camera Simulator","","WindowsForms10.BUTTON.app.0.141b42a_r6_ad11")
+Sleep(3000)
+ControlClick("VI Camera Simulator","","WindowsForms10.BUTTON.app.0.141b42a_r6_ad12")
+Sleep(3000)
+ControlClick("Add Cameras","","WindowsForms10.EDIT.app.0.141b42a_r6_ad11")
+Sleep(3000)
+ControlSetText("Add Cameras","","WindowsForms10.EDIT.app.0.141b42a_r6_ad11","5")
+Sleep(3000)
+ControlClick("Add Cameras","","WindowsForms10.BUTTON.app.0.141b42a_r6_ad11")
+
